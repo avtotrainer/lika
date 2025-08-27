@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ლიკა გოგრაჭაძე — პორტფოლიო</title>
+  <meta name="description" content="ლიკა გოგრაჭაძე — Linux, Git/GitHub, GitHub Pages, Bash." />
+  <meta name="author" content="ლიკა გოგრაჭაძე" />
+  <meta name="theme-color" content="#14b8a6" />
+  <link rel="icon" href="assets/favicon.png" />
+  <meta property="og:title" content="ლიკა გოგრაჭაძე — პორტფოლიო" />
+  <meta property="og:description" content="Linux · Git/GitHub · GitHub Pages · WSLg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/avtotrainer/lika" />
+
+  <style>
+    /* ===== Theme: Mint / Coral (photo left) ===== */
+    :root{
+      --bg:#071a19;       /* მუქი ტონალური ფონი */
+      --bg2:#0b2422;
+      --ink:#eaf7f4;      /* ღია ტექსტი */
+      --muted:#a8c5bf;    /* რბილი ტექსტი */
+      --card:#0e2523;     /* ბარათის ფონი */
+      --border:#1b3b37;   /* საზღვარი */
+      --brand:#14b8a6;    /* მინტი */
+      --brand-2:#fb7185;  /* კორალი */
+      --ring:#34d399;     /* focus outline */
+      --maxw:1120px; --r:18px;
+      --shadow:0 18px 42px rgba(2,6,23,.45);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at -10% -20%, #0a2e2a, transparent 60%),
+        radial-gradient(900px 600px at 120% 0%, #0f3a3644, transparent 55%),
+        linear-gradient(160deg, var(--bg), var(--bg2));
+      font:16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial;
+    }
+    a{color:#2dd4bf; text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    .muted{color:var(--muted)}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:10; backdrop-filter:blur(6px); background:#071a19cc; border-bottom:1px solid var(--border)}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .logo{font-weight:900; letter-spacing:.4px}
+    .nav{display:flex; gap:16px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+      background:linear-gradient(135deg, var(--brand), #10a392);
+      color:#05221e; border:0; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow:var(--shadow)
+    }
+    .btn.ghost{
+      background:transparent; color:var(--ink);
+      border:1px solid #1e4b44; box-shadow:none
+    }
+
+    /* Hero (split, photo left) */
+    .hero{padding:56px 0 24px}
+    .hero-wrap{display:grid; grid-template-columns: .9fr 1.1fr; gap:26px; align-items:center}
+    @media (max-width:900px){ .hero-wrap{grid-template-columns:1fr} }
+
+    .photo{
+      aspect-ratio:1/1; border-radius:22px; overflow:hidden; border:2px solid var(--brand);
+      display:grid; place-items:center; background:radial-gradient(110% 110% at 50% 0%, #0c3a35, #092b28);
+      box-shadow:var(--shadow)
+    }
+    .photo svg{width:82%; height:82%}
+
+    .card{
+      background:linear-gradient(180deg, #0f2c28, #0b2421);
+      border:1px solid var(--border); border-radius:var(--r); padding:24px; box-shadow:var(--shadow)
+    }
+    h1{margin:0 0 10px; font:800 clamp(28px,4.2vw,48px)/1.1 ui-serif, Georgia, serif}
+    .lead{font-size:18px; color:var(--muted); margin:0 0 14px}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:#0e3a34; color:#bbf7d0; font-weight:800}
+
+    /* Sections */
+    section{padding:28px 0}
+    section h2{margin:0 0 8px; font:800 clamp(22px,3vw,30px)/1.2 ui-serif, Georgia, serif}
+    .grid{display:grid; gap:16px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width:900px){ .cols-3,.cols-2{grid-template-columns:1fr} }
+
+    .mini{display:inline-block; padding:4px 10px; border-radius:999px; background:#0f3d36; color:#fce7f3; font-size:12px}
+    .card h3{margin:0}
+
+    /* Contact form */
+    form{display:grid; gap:10px}
+    input, textarea{
+      padding:10px 12px; border-radius:12px; border:1px solid #1e4b44; background:#071a19; color:var(--ink)
+    }
+    input:focus, textarea:focus, .btn:focus{outline:3px solid var(--ring); outline-offset:2px}
+
+    /* Footer */
+    footer{padding:34px 0 48px; color:#9fc6be; font-size:14px; background:#061615; border-top:1px solid var(--border)}
+    .footer-grid{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+    .sep{height:1px; background:var(--border); margin:12px 0 18px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="მთავარი ნავიგაცია">
+        <div class="logo">🌿 ლიკა გოგრაჭაძე <span class="muted">· პორტფოლიო</span></div>
+        <div class="nav">
+          <a href="#about">ჩემ შესახებ</a>
+          <a href="#projects">პროექტები</a>
+          <a href="#skills">უნარები</a>
+          <a href="#contact">კონტაქტი</a>
+          <a class="btn ghost" href="mailto:lika057@din.ge">✉️ წერილი</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrap">
+          <!-- Girl silhouette placeholder -->
+          <figure class="photo" aria-label="გოგონას სილუეტი">
+            <svg viewBox="0 0 128 128" role="img" aria-label="გოგონას სილუეტი">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#14b8a6"/>
+                  <stop offset="1" stop-color="#fb7185"/>
+                </linearGradient>
+              </defs>
+              <circle cx="64" cy="64" r="64" fill="url(#g)" opacity=".18"/>
+              <!-- თმები -->
+              <path d="M34 60c0-18 13-32 30-32s30 14 30 32c0 9-4 13-6 19-1 3-47 3-48 0-2-6-6-10-6-19z" fill="#2dd4bf"/>
+              <!-- სახე -->
+              <circle cx="64" cy="54" r="18" fill="#fce7e7"/>
+              <!-- მხრები/ტანი -->
+              <path d="M16 110c9-24 28-36 48-36s39 12 48 36" fill="#fb7185"/>
+            </svg>
+          </figure>
+
+          <div class="card">
+            <span class="pill">Linux · Git · GitHub Pages · WSLg</span>
+            <h1>გამარჯობა, მე ვარ ლიკა გოგრაჭაძე</h1>
+            <p class="lead">
+              საზაფხულო სკოლის დროს <strong>დავაყენე</strong> და <strong>განვაახლე</strong> Manjaro Linux, ტერმინალით ვიმუშავე საბაზო ბრძანებებით,
+              Git/GitHub-ით ვაკონტროლებ კოდს და <strong>GitHub Pages-ზე გამოვაქვეყნე</strong> სტატიკური საიტები.
+              Windows გარემოში <strong>WSLg ავამუშავე</strong>, რომ Linux აპები გრაფიკულად გამეშვა.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn" href="mailto:lika057@din.ge">დამიკავშირდი</a>
+              <a class="btn ghost" href="https://github.com/avtotrainer/lika" target="_blank" rel="noopener">🐙 GitHub რეპო</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2>ჩემ შესახებ</h2>
+        <p class="muted">
+          პროგრამის განმავლობაში <strong>Manjaro Linux დავაყენე</strong> და განვაახლე; GNOME ინტერფეისით ვიმუშავე;
+          ტერმინალი (<code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>touch</code>, <code>cat</code>, <code>nano</code>, <code>rm</code>);
+          Google Workspace (Docs/Sheets/Slides + Chat/Meet); Git/GitHub; <strong>GitHub Pages-ზე გამოვაქვეყნე</strong> პირადი გვერდები;
+          ხოლო Windows-ში <strong>WSL/WSLg ავამუშავე</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2>პროექტები</h2>
+        <p class="muted">შერჩეული ნამუშევრები:</p>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3 style="margin:0">📄 პერსონალური გვერდი</h3>
+            <span class="mini">HTML/CSS</span> <span class="mini">GitHub Pages</span>
+            <p class="muted">ერთგვერდიანი საიტი ჩემი ბიოსა და საკონტაქტო ინფორმაციით.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <!-- Live ჩასვი როცა დაედება Pages -->
+              <a class="btn ghost" href="#" target="_blank">Live</a>
+              <a class="btn ghost" href="https://github.com/avtotrainer/lika" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 style="margin:0">🔧 ავტო-კომიტის სკრიპტი</h3>
+            <span class="mini">Bash</span> <span class="mini">Git</span>
+            <p class="muted">სკრიპტი, რომელიც timestamp-ს ამატებს და ავტომატურად commit/push-ს აკეთებს.</p>
+          </article>
+
+          <article class="card">
+            <h3 style="margin:0">🔐 კრიპტო-დემო</h3>
+            <span class="mini">CLI</span> <span class="mini">SHA-256</span>
+            <p class="muted">ფაილის ჰაშის მიღება და კონტროლი ტერმინალიდან.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2>უნარები</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3 style="margin:0 0 6px">ტექნოლოგიები</h3>
+            <p class="muted">Linux (Manjaro/Ubuntu) · GNOME · Git · GitHub · GitHub Pages · Bash · WSL/WSLg</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">რბილი უნარები</h3>
+            <p class="muted">გუნდური მუშაობა · კომუნიკაცია (Google Chat/Meet) · პრეზენტაცია (Slides) · პრობლემების გადაჭრა</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2>კონტაქტი</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <p class="muted">მომწერე ელ-ფოსტაზე ან გადახედე რეპოზიტორს GitHub-ზე.</p>
+            <p>✉️ <a href="mailto:lika057@din.ge">lika057@din.ge</a></p>
+            <p>🐙 <a href="https://github.com/avtotrainer/lika" target="_blank" rel="noopener">github.com/avtotrainer/lika</a></p>
+          </div>
+          <div class="card">
+            <form action="https://formspree.io/f/your-id" method="POST">
+              <label>სახელი <input name="name" required></label>
+              <label>ელ-ფოსტა <input type="email" name="email" required></label>
+              <label>შეტყობინება <textarea name="message" rows="3" required></textarea></label>
+              <button class="btn" type="submit">გაგზავნა</button>
+              <small class="muted">* თუ Formspree არ გამოიყენება, ამ ბლოკის ამოღება შეგიძლია.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="sep"></div>
+      <div class="footer-grid">
+        <span>© <span id="y"></span> ლიკა გოგრაჭაძე</span>
+        <span class="muted">განახლდა: <span id="lm"></span></span>
+        <span class="muted">რეპო: <a href="https://github.com/avtotrainer/lika" target="_blank" rel="noopener">avtotrainer/lika</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('lm').textContent = new Date(document.lastModified).toLocaleDateString('ka-GE');
+  </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"ლიკა გოგრაჭაძე",
+    "email":"mailto:lika057@din.ge",
+    "sameAs":["https://github.com/avtotrainer/lika"]
+  }
+  </script>
+</body>
+</html>
